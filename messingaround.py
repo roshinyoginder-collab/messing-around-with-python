@@ -41,51 +41,51 @@ result = morse_translation(morse)
 print(result)
 print ("pretty cool huh?")
 
-try:
-    print ("would you like to try something else?")
-    if input("yes or no: ").lower() == "yes":
-        print("ok, lets do it")
-    elif input("yes or no: ").lower() == "no":
-        sys.exit("Fine, Be like that then, not that i wanted you to play anyway...")
-except: 
-    print("only use yes or no, you are not very smart are you?")
-    sys.exit 
-
-print("ok, now we are going to play a trivia game")
-print("every right answer will add a point to your score BUT you will not get to see it till they are all done, capiche?")
-score = 0 
-Q1=input ("""What is the meaning of life, the universe, and everything?
-          A 42
-          B To be happy 
-          C 383
-          D to be kind to one another""")
-if Q1.lower() == "a":
-    score += 1 
-Q2=input ("""What city is the azerbaijani grand prix held in?
-          A Tajikistan
-          B Addis Ababa
-          C Baku
-          D Nurburgring""")
-if Q2.lower() == "c":
-    score += 1
-Q3=input ("""how many UN recognised countries are there?
-          A 200
-          B 195
-          C 193
-          D 199""")
-if Q3.lower() == "c":
-    score += 1
 
 
-if score == 3:
-    print("You got all of them right, you are not stupid")
-if score == 2:
-    print("You got 2 out of 3 right, Hm, I'll pay it")
-if score == 1:
-    print("You got 1 out of 3 right, you suck at this dont you...")
-if score == 0:
-    print("You got 0 out of 3 right, you are a failure")
-print ("Thank you for trying this program I made, some parts may suck but this is my attempt to learn the basics of python, so I hope you found it satisfactory. And in case I don't see you, good afternoon, good evening, and good night.")
-End = input("Press enter to exit the program") 
-if End == "":
+ans = input("press return to try something else")
+if ans == "":
+    print ("ok, now we are going to play a trivia game")
+    print ("every right answer will add a point to your score BUT you will not get to see it till they are all done, capiche?")
+    score = 0 
+    Q1=input ("""What is the meaning of life, the universe, and everything?
+            A 42
+            B To be happy 
+            C 383
+            D to be kind to one another
+            Answer(lowercase): """)
+    if Q1.lower() == "a":
+        score += 1 
+    Q2=input ("""What city is the azerbaijani grand prix held in?
+            A Tajikistan
+            B Addis Ababa
+            C Baku
+            D Nurburgring
+            Answer(lowercase): """)
+    if Q2.lower() == "c":
+        score += 1
+    Q3=input ("""how many UN recognised countries are there?
+            A 200
+            B 195
+            C 193
+            D 199
+            Answer(lowercase): """)
+    if Q3.lower() == "c":
+        score += 1
+
+
+    if score == 3:
+        print("You got all of them right, you are not stupid")
+    if score == 2:
+        print("You got 2 out of 3 right, Hm, I'll pay it")
+    if score == 1:
+        print("You got 1 out of 3 right, you suck at this dont you...")
+    if score == 0:
+        print("You got 0 out of 3 right, you are a failure")
+    print ("Thank you for trying this program I made, some parts may suck but this is my attempt to learn the basics of python, so I hope you found it satisfactory. And in case I don't see you, good afternoon, good evening, and good night.")
+    End = input("Press enter to exit the program") 
+    if End == "":
+     sys.exit("Goodbye")
+else:
+    print ("So you have chosen... death.")
     sys.exit("Goodbye")
